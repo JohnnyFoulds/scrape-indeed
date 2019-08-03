@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="547.2,2108" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:nj="clr-namespace:Newtonsoft.Json;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="447.2,888" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:nj="clr-namespace:Newtonsoft.Json;assembly=Newtonsoft.Json" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="42">
       <x:String>System.Activities</x:String>
@@ -50,21 +50,21 @@
       <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main" sap:VirtualizedContainerService.HintSize="507.2,1988" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence DisplayName="Main" sap:VirtualizedContainerService.HintSize="407.2,768" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="KeywordsTable" />
       <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="JobPostingsDataTable" />
       <Variable x:TypeArguments="x:String" Name="JobPostingOutput" />
       <Variable x:TypeArguments="nj:JsonConvert" Name="jsonConverter" />
-      <Variable x:TypeArguments="x:String" Default="[&quot;&quot;&quot;apache spark&quot;&quot;&quot;]" Name="currentKeyword" />
+      <Variable x:TypeArguments="x:String" Default="[&quot;&quot;&quot;HBase&quot;&quot;&quot;]" Name="currentKeyword" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ReadCsvFile Encoding="{x:Null}" DataTable="[KeywordsTable]" Delimitator="Comma" DisplayName="Read keywords.csv" FilePath="keywords.csv" sap:VirtualizedContainerService.HintSize="468.8,60" sap2010:WorkflowViewState.IdRef="ReadCsvFile_1" />
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="468.8,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+    <ui:ReadCsvFile Encoding="{x:Null}" DataTable="[KeywordsTable]" Delimitator="Comma" DisplayName="Read keywords.csv" FilePath="keywords.csv" sap:VirtualizedContainerService.HintSize="368.8,60" sap2010:WorkflowViewState.IdRef="ReadCsvFile_1" />
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="368.8,52.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="382.4,496.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <sap:WorkflowViewStateService.ViewState>
@@ -115,7 +115,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:CommentOut>
-    <ui:OpenBrowser UiBrowser="{x:Null}" BrowserType="IE" DisplayName="Open indeed.co.za" Hidden="False" sap:VirtualizedContainerService.HintSize="468.8,994.4" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" NewSession="True" Private="False" Url="https://www.indeed.co.za/">
+    <ui:OpenBrowser UiBrowser="{x:Null}" BrowserType="IE" DisplayName="Open indeed.co.za" Hidden="False" sap:VirtualizedContainerService.HintSize="368.8,52.8" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" NewSession="True" Private="False" Url="https://www.indeed.co.za/">
       <ui:OpenBrowser.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -162,15 +162,15 @@
       </ui:OpenBrowser.Body>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:OpenBrowser>
-    <Sequence DisplayName="Data Scraping" sap:VirtualizedContainerService.HintSize="468.8,440" sap2010:WorkflowViewState.IdRef="Sequence_8">
+    <Sequence DisplayName="Scrape Job Postings" sap:VirtualizedContainerService.HintSize="368.8,68.8" sap2010:WorkflowViewState.IdRef="Sequence_8">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
@@ -202,14 +202,21 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:BrowserScope>
     </Sequence>
-    <Assign DisplayName="Convert Job Postings to JSON" sap:VirtualizedContainerService.HintSize="468.8,60" sap2010:WorkflowViewState.IdRef="Assign_2">
-      <Assign.To>
-        <OutArgument x:TypeArguments="x:String">[JobPostingOutput]</OutArgument>
-      </Assign.To>
-      <Assign.Value>
-        <InArgument x:TypeArguments="x:String">[jsonConverter.SerializeObject(JobPostingsDataTable)]</InArgument>
-      </Assign.Value>
-    </Assign>
-    <ui:WriteTextFile DisplayName="Write Text File" FileName="[&quot;output\&quot; &amp; DateTime.Now.ToString(&quot;yyyyMMdd&quot;) &amp; &quot;_&quot; &amp; DateTime.Now.ToString(&quot;HHmmss&quot;) &amp;&quot;.json&quot;]" sap:VirtualizedContainerService.HintSize="468.8,88" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[JobPostingOutput]" />
+    <Sequence DisplayName="Write Job Postings to JSON" sap:VirtualizedContainerService.HintSize="368.8,280.8" sap2010:WorkflowViewState.IdRef="Sequence_12">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Assign DisplayName="Convert Job Postings to JSON" sap:VirtualizedContainerService.HintSize="330.4,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[JobPostingOutput]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">[jsonConverter.SerializeObject(JobPostingsDataTable)]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <ui:WriteTextFile DisplayName="Write Text File" FileName="[&quot;output\&quot; &amp; DateTime.Now.ToString(&quot;yyyyMMdd&quot;) &amp; &quot;_&quot; &amp; DateTime.Now.ToString(&quot;HHmmss&quot;) &amp;&quot;.json&quot;]" sap:VirtualizedContainerService.HintSize="330.4,88" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[JobPostingOutput]" />
+    </Sequence>
   </Sequence>
 </Activity>
