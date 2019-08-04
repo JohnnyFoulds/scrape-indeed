@@ -7,6 +7,12 @@ This is a micro project that is the first of a series of micro projects that wil
 
 ![Logical Flow Diagram](images/logical-flow.svg)
 
+## Sample Output
+
+The image below shows a sample of a .json file that this robot produced. The intention is to use this output and perform some clean-up on it using [Apache Spark](https://spark.apache.org/) as part of the next step in the data pipeline.
+
+![JSON Sample Output](images/json-sample.png)
+
 ## Lessons Learned
 
 ### Speed Up the ExtractData Activity
