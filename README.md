@@ -9,7 +9,7 @@ This is a micro project that is the first of a series of micro projects that wil
 
 ## Sample Output
 
-The image below shows a sample of a .json file that this robot produced. The intention is to use this output and perform some clean-up on it using [Apache Spark](https://spark.apache.org/) as part of the next step in the data pipeline.
+The image below shows a sample of a .json file that this robot produces. The intention is to use this output and perform some clean-up on it using [Apache Spark](https://spark.apache.org/) as part of the next step in the data pipeline.
 
 ![JSON Sample Output](images/json-sample.png)
 
