@@ -9,7 +9,14 @@ This is a micro project that is the first of a series of micro projects that wil
 
 ## Lessons Learned
 
-### Speed Up Extract Structured Data
+### Speed Up the Extract Data Activity
 When it is waiting for the next button on the last item to find it, ContiniueOnError is set to true, so it will continue, but the default TimeOut is 30s, so decrease it to 2000 (2s) or so to drastically reduce the time you have to wait for that.
 
 ![ContinueOnError TimeOut](images/continue-timeout.png)
+
+## Break up the Monolith
+While it works to have the entire RPA workflow contained in a single .xaml file as in the initial version of this project, I do feel it has several disadvantage. The first two which stands out:
+1. __Degugging is harder__ - When it is a single .xaml file you have to either run everything when debugging the workflow, or comment out pieces not to execute as I have done during the development.
+2. __Multiple Engineers__ - It would be very inefficient for multiple engineers to work in parallel on different sub-functions of the workflow.
+
+The solution should be quite obvious, the robot should be split into sub-functions just as in a traditional procedural programming language.
