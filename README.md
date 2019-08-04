@@ -5,7 +5,7 @@ This is a micro project that is the first of a series of micro projects that wil
 
 ## Logical Flow
 
-[[images/logical-flow.png]]
+![Logical Flow Diagram](images/logical-flow.svg)
 
 ## Lessons Learned
 
