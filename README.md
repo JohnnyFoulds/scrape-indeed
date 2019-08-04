@@ -11,3 +11,5 @@ This is a micro project that is the first of a series of micro projects that wil
 
 ### Speed Up Extract Structured Data
 When it is waiting for the next button on the last item to find it, ContiniueOnError is set to true, so it will continue, but the default TimeOut is 30s, so decrease it to 2000 (2s) or so to drastically reduce the time you have to wait for that.
+
+![ContinueOnError TimeOut](images/continue-timeout.png)
