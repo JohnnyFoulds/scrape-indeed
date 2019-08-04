@@ -25,4 +25,4 @@ While it works to have the entire RPA workflow contained in a single .xaml file 
 1. __Degugging is harder__ - When it is a single .xaml file you have to either run everything when debugging the workflow, or comment out pieces not to execute as I have done during the development.
 2. __Multiple Engineers__ - It would be very inefficient for multiple engineers to work in parallel on different sub-functions of the workflow.
 
-The solution should be quite obvious, the robot should be split into sub-functions (seperate .xaml files) just as in a traditional procedural programming language.
+The solution should be quite obvious, the robot should be split into sub-functions (using separate .xaml files calling each other) just as in a traditional procedural programming language.
